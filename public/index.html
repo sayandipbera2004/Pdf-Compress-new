@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Compressor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>PDF Compressor</h2>
+        <form method="post" enctype="multipart/form-data" action="/">
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Upload your PDF file</label>
+                <input class="form-control" type="file" id="formFile" name="file" accept="application/pdf" required>
+            </div>
+            <div class="compression-level">
+                <label for="compression" class="form-label">Select Compression Level:</label>
+                <select class="form-select" id="compression" name="compression" required>
+                    <option value="high">High Compression (Lowest Quality)</option>
+                    <option value="medium">Medium Compression (Good Quality)</option>
+                    <option value="low">Low Compression (Best Quality)</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-compress">Compress PDF</button>
+        </form>
+        <div class="footer">
+            <p>Made By Sayandip Bera</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
